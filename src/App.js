@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 import NavigationBar from './components/NavigationBar';
-import Footer from './components/Footer';
+import FooterComponent from './components/FooterComponent';
 import HomePage from './pages/HomePage';
 import OurStoresPage from './pages/OurStoresPage';
 import WhatsNewPage from './pages/WhatsNewPage';
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/our-stores" element={<OurStoresPage />} />
         <Route path="/whats-new" element={<WhatsNewPage />} />
       </Routes>
-      <Footer />
+      <FooterComponent />
     </Router>
   );
 }
