@@ -1,21 +1,24 @@
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import GlobalStyle from './styles/GlobalStyle';
+import NavigationBar from './components/NavigationBar';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import OurStoresPage from './pages/OurStoresPage';
+import WhatsNewPage from './pages/WhatsNewPage';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/our-stores" element={<OurStoresPage />} />
+        <Route path="/whats-new" element={<WhatsNewPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
