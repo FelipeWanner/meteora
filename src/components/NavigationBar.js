@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import meteoraLogo from '../assets/logo-meteora.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,7 @@ const NavigationBar = () => {
   return (
     <StyledNavbar expand="md" variant="dark">
       <div className="container-fluid">
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={NavLink} to="/">
           <img
             src={meteoraLogo}
             alt="Meteora Logo"
@@ -24,13 +24,13 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" className="nav-link active">
+            <Nav.Link as={NavLink} to="/" exact>
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/our-stores" className="nav-link">
+            <Nav.Link as={NavLink} to="/our-stores">
               Our Stores
             </Nav.Link>
-            <Nav.Link as={Link} to="/whats-new" className="nav-link">
+            <Nav.Link as={NavLink} to="/whats-new">
               What's New
             </Nav.Link>
           </Nav>
@@ -59,3 +59,4 @@ const NavigationBar = () => {
 };
 
 export default NavigationBar;
+
