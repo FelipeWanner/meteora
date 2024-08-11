@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import StoreCard from '../components/StoreCard';
 import FindStoreForm from '../components/FindStoreForm';
-import { getStores } from '../mockApi';
+import { getStores } from '../data/mockApi';
 import { aboutUsText, ourProductsAndBrandsText } from '../content/aboutContent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import friendsIMG from "../assets/AboutUs/AboutUs2.jpg";
