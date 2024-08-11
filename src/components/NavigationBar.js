@@ -24,7 +24,7 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/" exact>
+            <Nav.Link as={NavLink} to="/">
               Home
             </Nav.Link>
             <Nav.Link as={NavLink} to="/our-stores">

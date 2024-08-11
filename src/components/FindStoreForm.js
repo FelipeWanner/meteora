@@ -9,7 +9,7 @@ const FindStoreForm = ({ isInternational }) => {
         <>
           <div className="col-12 col-lg-8">
             <select className="form-select rounded-0">
-              <option selected>Select Country/Region</option>
+              <option value>Select Country/Region</option>
               <option value="1">Austria</option>
               <option value="2">Canada</option>
               {/* Add more options here */}
@@ -27,7 +27,7 @@ const FindStoreForm = ({ isInternational }) => {
           </div>
           <div className="col-5 col-lg-3">
             <select className="form-select rounded-0">
-              <option selected>Select Radius</option>
+              <option value>Select Radius</option>
               <option value="1">12 KM</option>
               <option value="2">30 KM</option>
               {/* Add more options here */}

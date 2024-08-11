@@ -61,11 +61,13 @@ export const getStores = () => {
             imageSrc: store1,
             storeName: "Beverly Hills",
             location: "Los Angeles, CA",
+            id: 1,
         },
         {
             imageSrc: store2,
             storeName: "Chicago",
             location: "Chicago, IL",
+            id: 2,
         }
     ]);
 };
