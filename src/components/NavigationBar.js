@@ -30,8 +30,8 @@ const NavigationBar = () => {
             <Nav.Link as={NavLink} to="/our-stores">
               Our Stores
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/whats-new">
-              What's New
+            <Nav.Link as={NavLink} to="/careers">
+              Careers
             </Nav.Link>
           </Nav>
           <Form className="d-flex">

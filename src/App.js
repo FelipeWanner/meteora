@@ -5,7 +5,7 @@ import NavigationBar from './components/NavigationBar';
 import FooterComponent from './components/FooterComponent';
 import HomePage from './pages/HomePage';
 import OurStoresPage from './pages/OurStoresPage';
-import WhatsNewPage from './pages/WhatsNewPage';
+import CareersPage from './pages/CareersPage';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/our-stores" element={<OurStoresPage />} />
-        <Route path="/whats-new" element={<WhatsNewPage />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Routes>
       <FooterComponent />
     </Router>
