@@ -853,3 +853,30 @@ export const getProducts = () => {
       }, 1000);
     });
   };
+
+//INFORMACOES DOS FUNCIONARIOS
+
+  const mockManager = {
+    username: 'jonatas.manager@example.com',
+    password: 'admin123',
+    fullName: 'Jonatas Lira',
+    role: 'Manager', 
+    profilePic: JonatasFoto,  
+  };
+
+  export const authenticateManager = async (email, password) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === mockManager.username && password === mockManager.password) {
+          resolve({
+            username: mockManager.username,
+            fullName: mockManager.fullName,
+            role: mockManager.role,
+            profilePic: mockManager.profilePic, 
+          });
+        } else {
+          reject('Invalid manager credentials');
+        }
+      }, 1000);
+    });
+  };
