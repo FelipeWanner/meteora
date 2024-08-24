@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import defaultUserPic from "../assets/default-user.png";
 import LoginModal from './LoginModal';
+import CartModal from './CartModal';
 
 const UserSection = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,6 +20,12 @@ const UserSection = () => {
     });
   };
 
+  const [showCartModal, setShowCartModal] = useState(false);
+
+  const handleCartClick = () => {
+    setShowCartModal(true);
+  };
+
   return (
     <div className="user-section d-flex align-items-center ms-3" style={{ marginRight: '20px' }}>
       <div className="me-2 text-white" style={{ cursor: 'pointer' }}>
@@ -32,9 +38,11 @@ const UserSection = () => {
           {isLoggedIn ? userData.fullName : <LoginModal onLoginSuccess={handleLoginSuccess} />} 
         </span>
       </div>
-      <Nav.Link as={Link} to="/cart" className="ms-2">
+      <Nav.Link onClick={handleCartClick} className="ms-2">
         <i className="bi bi-cart" style={{ fontSize: '1.5rem', color: '#fff' }}></i>
       </Nav.Link>
+
+      <CartModal show={showCartModal} handleClose={() => setShowCartModal(false)} />
     </div>
   );
 };

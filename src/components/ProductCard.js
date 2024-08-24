@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { CartContext } from '../components/CartContext';
 
 const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, description, price }) => {
+  const { addToCart } = useContext(CartContext); // acessa addToCart function do cart context
+
+  const handleAddToCart = () => {
+    const product = {
+      title,
+      description,
+      price,
+      imgSrcMobile,
+      imgSrcTablet,
+      imgSrcDesktop
+    };
+    addToCart(product); // Add product to cart
+  };
+
   return (
     <Card className="h-100">
       <picture>
@@ -15,7 +30,9 @@ const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, descrip
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <p>{price}</p>
-        <Button variant="primary" className="border-0 color-purple rounded-0">Add to Cart</Button>
+        <Button variant="primary" className="border-0 color-purple rounded-0" onClick={handleAddToCart}>
+          Add to Cart
+        </Button>
       </Card.Body>
     </Card>
   );
