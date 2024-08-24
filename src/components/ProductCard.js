@@ -3,11 +3,12 @@ import { Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CartContext } from '../components/CartContext';
 
-const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, description, price }) => {
-  const { addToCart } = useContext(CartContext); // acessa addToCart function do cart context
+const ProductCard = ({ id, imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, description, price }) => {
+  const { addToCart } = useContext(CartContext); // Access addToCart from CartContext
 
   const handleAddToCart = () => {
     const product = {
+      id, 
       title,
       description,
       price,
@@ -15,6 +16,7 @@ const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, descrip
       imgSrcTablet,
       imgSrcDesktop
     };
+    console.log("Product added to cart:", product);
     addToCart(product); // Add product to cart
   };
 
@@ -39,4 +41,3 @@ const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, descrip
 };
 
 export default ProductCard;
-

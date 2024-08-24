@@ -139,6 +139,7 @@ export const getCategories = () => {
 export const getProducts = () => {
     return Promise.resolve([
         {
+            id:1,
             imgSrcMobile: camisetaMobile,
             imgSrcTablet: camisetaTablet,
             imgSrcDesktop: camisetaDesktop,
@@ -147,6 +148,7 @@ export const getProducts = () => {
             price: '$54,00',
         },
         {
+            id:2,
             imgSrcMobile: produtoCalcaMobile,
             imgSrcTablet: produtoCalcaTablet,
             imgSrcDesktop: produtoCalcaDesktop,
@@ -155,6 +157,7 @@ export const getProducts = () => {
             price: '$54,00',
         },
         {
+            id:3,
             imgSrcMobile: tenisMobile,
             imgSrcTablet: tenisTablet,
             imgSrcDesktop: tenisDesktop,
@@ -163,6 +166,7 @@ export const getProducts = () => {
             price: '$54,00',
         },
         {
+            id:4,
             imgSrcMobile: jaquetaJeansMobile,
             imgSrcTablet: jaquetaJeansTablet,
             imgSrcDesktop: jaquetaJeansDesktop,
@@ -171,6 +175,7 @@ export const getProducts = () => {
             price: '$54,00',
         },
         {
+            id:5,
             imgSrcMobile: produtoOculosMobile,
             imgSrcTablet: produtoOculosTablet,
             imgSrcDesktop: produtoOculosDesktop,
@@ -179,6 +184,7 @@ export const getProducts = () => {
             price: '$54,00',
         },
         {
+            id:6,
             imgSrcMobile: produtoBolsaMobile,
             imgSrcTablet: produtoBolsaTablet,
             imgSrcDesktop: produtoBolsaDesktop,
@@ -194,542 +200,608 @@ export const getProducts = () => {
   const products = {
     "T-Shirts": [
       {
+        id: "tshirt1",
         imgSrcMobile: blackTshirtMobile,
         imgSrcTablet: blackTshirtMobile,
         imgSrcDesktop: blackTshirtMobile,
-        title: "Black T-Shirt",
-        description: "A stylish black t-shirt",
-        price: "$54.00"
+        title: "Classic Black T-Shirt",
+        description: "A comfortable black t-shirt for everyday wear.",
+        price: "$49.99"
       },
       {
+        id: "tshirt2",
         imgSrcMobile: blackLightningTshirtMobile,
         imgSrcTablet: blackLightningTshirtMobile,
         imgSrcDesktop: blackLightningTshirtMobile,
         title: "Black Lightning T-Shirt",
-        description: "A bold black t-shirt with lightning design",
+        description: "A bold t-shirt with an electrifying design.",
         price: "$65.00"
       },
       {
+        id: "tshirt3",
         imgSrcMobile: daddyTshirtMobile,
         imgSrcTablet: daddyTshirtMobile,
         imgSrcDesktop: daddyTshirtMobile,
         title: "Daddy T-Shirt",
-        description: "A classic 'Daddy' t-shirt",
+        description: "A playful and casual daddy tee.",
         price: "$60.00"
       },
       {
+        id: "tshirt4",
         imgSrcMobile: darkblueTshirtMobile,
         imgSrcTablet: darkblueTshirtMobile,
         imgSrcDesktop: darkblueTshirtMobile,
         title: "Dark Blue T-Shirt",
-        description: "A deep blue t-shirt for a stylish look",
+        description: "A deep blue t-shirt for a casual stylish look.",
         price: "$50.00"
       },
       {
+        id: "tshirt5",
         imgSrcMobile: greyTshirtMobile,
         imgSrcTablet: greyTshirtMobile,
         imgSrcDesktop: greyTshirtMobile,
-        title: "Grey T-Shirt",
-        description: "A casual grey t-shirt",
+        title: "Casual Grey T-Shirt",
+        description: "A casual grey t-shirt for any occasion.",
         price: "$55.00"
       },
       {
+        id: "tshirt6",
         imgSrcMobile: lightblueTshirtMobile,
         imgSrcTablet: lightblueTshirtMobile,
         imgSrcDesktop: lightblueTshirtMobile,
         title: "Light Blue T-Shirt",
-        description: "A soft light blue t-shirt",
+        description: "A soft and breathable light blue t-shirt.",
         price: "$52.00"
       },
       {
+        id: "tshirt7",
         imgSrcMobile: mountainTshirtMobile,
         imgSrcTablet: mountainTshirtMobile,
         imgSrcDesktop: mountainTshirtMobile,
         title: "Mountain T-Shirt",
-        description: "A t-shirt featuring a mountain design",
+        description: "A nature-inspired t-shirt with a mountain design.",
         price: "$58.00"
       },
       {
+        id: "tshirt8",
         imgSrcMobile: pinkTshirtMobile,
         imgSrcTablet: pinkTshirtMobile,
         imgSrcDesktop: pinkTshirtMobile,
         title: "Pink T-Shirt",
-        description: "A cute pink t-shirt",
+        description: "A bright and fun pink t-shirt for any wardrobe.",
         price: "$53.00"
       },
       {
+        id: "tshirt9",
         imgSrcMobile: primetimeTshirtMobile,
         imgSrcTablet: primetimeTshirtMobile,
         imgSrcDesktop: primetimeTshirtMobile,
         title: "Primetime T-Shirt",
-        description: "A stylish primetime t-shirt",
+        description: "A bold primetime t-shirt for standout style.",
         price: "$59.00"
       },
       {
+        id: "tshirt10",
         imgSrcMobile: whiteTshirtMobile,
         imgSrcTablet: whiteTshirtMobile,
         imgSrcDesktop: whiteTshirtMobile,
         title: "White T-Shirt",
-        description: "A classic white t-shirt",
+        description: "A classic white t-shirt for versatile styling.",
         price: "$54.00"
       },
       {
+        id: "tshirt11",
         imgSrcMobile: yourDesignTshirtMobile,
         imgSrcTablet: yourDesignTshirtMobile,
         imgSrcDesktop: yourDesignTshirtMobile,
-        title: "Your Design T-Shirt",
-        description: "A customizable t-shirt for your unique style",
+        title: "Customizable T-Shirt",
+        description: "Design your own unique t-shirt with this option.",
         price: "$60.00"
       }
     ],
     "Purses": [
       {
+        id: "purse1",
         imgSrcMobile: blackTshirtMobile,
         imgSrcTablet: blackTshirtMobile,
         imgSrcDesktop: blackTshirtMobile,
-        title: "Black T-Shirt",
-        description: "A stylish black t-shirt",
-        price: "$54.00"
+        title: "Elegant Leather Purse",
+        description: "A premium leather purse for all occasions.",
+        price: "$120.00"
       },
       {
+        id: "purse2",
         imgSrcMobile: blackLightningTshirtMobile,
         imgSrcTablet: blackLightningTshirtMobile,
         imgSrcDesktop: blackLightningTshirtMobile,
-        title: "Black Lightning T-Shirt",
-        description: "A bold black t-shirt with lightning design",
-        price: "$65.00"
+        title: "Classic Handbag",
+        description: "A stylish handbag perfect for day and night.",
+        price: "$135.00"
       },
       {
+        id: "purse3",
         imgSrcMobile: daddyTshirtMobile,
         imgSrcTablet: daddyTshirtMobile,
         imgSrcDesktop: daddyTshirtMobile,
-        title: "Daddy T-Shirt",
-        description: "A classic 'Daddy' t-shirt",
-        price: "$60.00"
+        title: "Casual Tote Bag",
+        description: "A lightweight tote bag for everyday use.",
+        price: "$95.00"
       },
       {
+        id: "purse4",
         imgSrcMobile: darkblueTshirtMobile,
         imgSrcTablet: darkblueTshirtMobile,
         imgSrcDesktop: darkblueTshirtMobile,
-        title: "Dark Blue T-Shirt",
-        description: "A deep blue t-shirt for a stylish look",
-        price: "$50.00"
+        title: "Deep Blue Satchel",
+        description: "A durable satchel bag with a chic design.",
+        price: "$150.00"
       },
       {
+        id: "purse5",
         imgSrcMobile: greyTshirtMobile,
         imgSrcTablet: greyTshirtMobile,
         imgSrcDesktop: greyTshirtMobile,
-        title: "Grey T-Shirt",
-        description: "A casual grey t-shirt",
-        price: "$55.00"
+        title: "Grey Evening Clutch",
+        description: "An elegant clutch for evening events.",
+        price: "$80.00"
       },
       {
+        id: "purse6",
         imgSrcMobile: lightblueTshirtMobile,
         imgSrcTablet: lightblueTshirtMobile,
         imgSrcDesktop: lightblueTshirtMobile,
-        title: "Light Blue T-Shirt",
-        description: "A soft light blue t-shirt",
-        price: "$52.00"
+        title: "Light Blue Crossbody Bag",
+        description: "A convenient and stylish crossbody bag.",
+        price: "$110.00"
       },
       {
+        id: "purse7",
         imgSrcMobile: mountainTshirtMobile,
         imgSrcTablet: mountainTshirtMobile,
         imgSrcDesktop: mountainTshirtMobile,
-        title: "Mountain T-Shirt",
-        description: "A t-shirt featuring a mountain design",
-        price: "$58.00"
+        title: "Mountain Print Backpack",
+        description: "A functional backpack with a unique print.",
+        price: "$85.00"
       },
       {
+        id: "purse8",
         imgSrcMobile: pinkTshirtMobile,
         imgSrcTablet: pinkTshirtMobile,
         imgSrcDesktop: pinkTshirtMobile,
-        title: "Pink T-Shirt",
-        description: "A cute pink t-shirt",
-        price: "$53.00"
+        title: "Pink Shoulder Bag",
+        description: "A vibrant pink shoulder bag for bold style.",
+        price: "$120.00"
       },
       {
+        id: "purse9",
         imgSrcMobile: primetimeTshirtMobile,
         imgSrcTablet: primetimeTshirtMobile,
         imgSrcDesktop: primetimeTshirtMobile,
-        title: "Primetime T-Shirt",
-        description: "A stylish primetime t-shirt",
-        price: "$59.00"
+        title: "Primetime Tote",
+        description: "A sleek tote bag for work and play.",
+        price: "$105.00"
       },
       {
+        id: "purse10",
         imgSrcMobile: whiteTshirtMobile,
         imgSrcTablet: whiteTshirtMobile,
         imgSrcDesktop: whiteTshirtMobile,
-        title: "White T-Shirt",
-        description: "A classic white t-shirt",
-        price: "$54.00"
+        title: "White Quilted Purse",
+        description: "A sophisticated quilted purse for a polished look.",
+        price: "$140.00"
       },
       {
+        id: "purse11",
         imgSrcMobile: yourDesignTshirtMobile,
         imgSrcTablet: yourDesignTshirtMobile,
         imgSrcDesktop: yourDesignTshirtMobile,
-        title: "Your Design T-Shirt",
-        description: "A customizable t-shirt for your unique style",
-        price: "$60.00"
+        title: "Customizable Purse",
+        description: "Design your own personalized purse.",
+        price: "$160.00"
       }
     ],
     "Sneakers": [
       {
+        id: "sneaker1",
         imgSrcMobile: blackTshirtMobile,
         imgSrcTablet: blackTshirtMobile,
         imgSrcDesktop: blackTshirtMobile,
-        title: "Black T-Shirt",
-        description: "A stylish black t-shirt",
-        price: "$54.00"
+        title: "Black Running Sneakers",
+        description: "Comfortable black sneakers for running.",
+        price: "$89.99"
       },
       {
+        id: "sneaker2",
         imgSrcMobile: blackLightningTshirtMobile,
         imgSrcTablet: blackLightningTshirtMobile,
         imgSrcDesktop: blackLightningTshirtMobile,
-        title: "Black Lightning T-Shirt",
-        description: "A bold black t-shirt with lightning design",
-        price: "$65.00"
+        title: "Lightning Sport Sneakers",
+        description: "Sleek sneakers with a lightning design.",
+        price: "$120.00"
       },
       {
+        id: "sneaker3",
         imgSrcMobile: daddyTshirtMobile,
         imgSrcTablet: daddyTshirtMobile,
         imgSrcDesktop: daddyTshirtMobile,
-        title: "Daddy T-Shirt",
-        description: "A classic 'Daddy' t-shirt",
-        price: "$60.00"
+        title: "Daddy Casual Sneakers",
+        description: "Comfortable sneakers for casual wear.",
+        price: "$75.00"
       },
       {
+        id: "sneaker4",
         imgSrcMobile: darkblueTshirtMobile,
         imgSrcTablet: darkblueTshirtMobile,
         imgSrcDesktop: darkblueTshirtMobile,
-        title: "Dark Blue T-Shirt",
-        description: "A deep blue t-shirt for a stylish look",
-        price: "$50.00"
+        title: "Dark Blue High-Tops",
+        description: "Stylish high-top sneakers for a modern look.",
+        price: "$95.00"
       },
       {
+        id: "sneaker5",
         imgSrcMobile: greyTshirtMobile,
         imgSrcTablet: greyTshirtMobile,
         imgSrcDesktop: greyTshirtMobile,
-        title: "Grey T-Shirt",
-        description: "A casual grey t-shirt",
-        price: "$55.00"
+        title: "Grey Slip-On Sneakers",
+        description: "Convenient and stylish slip-on sneakers.",
+        price: "$80.00"
       },
       {
+        id: "sneaker6",
         imgSrcMobile: lightblueTshirtMobile,
         imgSrcTablet: lightblueTshirtMobile,
         imgSrcDesktop: lightblueTshirtMobile,
-        title: "Light Blue T-Shirt",
-        description: "A soft light blue t-shirt",
-        price: "$52.00"
+        title: "Light Blue Running Shoes",
+        description: "Breathable running shoes for daily exercise.",
+        price: "$110.00"
       },
       {
+        id: "sneaker7",
         imgSrcMobile: mountainTshirtMobile,
         imgSrcTablet: mountainTshirtMobile,
         imgSrcDesktop: mountainTshirtMobile,
-        title: "Mountain T-Shirt",
-        description: "A t-shirt featuring a mountain design",
-        price: "$58.00"
+        title: "Mountain Trail Sneakers",
+        description: "Durable sneakers for hiking and trails.",
+        price: "$125.00"
       },
       {
+        id: "sneaker8",
         imgSrcMobile: pinkTshirtMobile,
         imgSrcTablet: pinkTshirtMobile,
         imgSrcDesktop: pinkTshirtMobile,
-        title: "Pink T-Shirt",
-        description: "A cute pink t-shirt",
-        price: "$53.00"
+        title: "Pink Sports Sneakers",
+        description: "Bright pink sneakers for active women.",
+        price: "$95.00"
       },
       {
+        id: "sneaker9",
         imgSrcMobile: primetimeTshirtMobile,
         imgSrcTablet: primetimeTshirtMobile,
         imgSrcDesktop: primetimeTshirtMobile,
-        title: "Primetime T-Shirt",
-        description: "A stylish primetime t-shirt",
-        price: "$59.00"
+        title: "Primetime Basketball Shoes",
+        description: "High-performance sneakers for basketball.",
+        price: "$140.00"
       },
       {
+        id: "sneaker10",
         imgSrcMobile: whiteTshirtMobile,
         imgSrcTablet: whiteTshirtMobile,
         imgSrcDesktop: whiteTshirtMobile,
-        title: "White T-Shirt",
-        description: "A classic white t-shirt",
-        price: "$54.00"
+        title: "White Classic Sneakers",
+        description: "Classic white sneakers for casual style.",
+        price: "$80.00"
       },
       {
+        id: "sneaker11",
         imgSrcMobile: yourDesignTshirtMobile,
         imgSrcTablet: yourDesignTshirtMobile,
         imgSrcDesktop: yourDesignTshirtMobile,
-        title: "Your Design T-Shirt",
-        description: "A customizable t-shirt for your unique style",
-        price: "$60.00"
+        title: "Customizable Sneakers",
+        description: "Design your own custom sneakers.",
+        price: "$160.00"
       }
     ],
     "Pants": [
       {
+        id: "pants1",
         imgSrcMobile: blackTshirtMobile,
         imgSrcTablet: blackTshirtMobile,
         imgSrcDesktop: blackTshirtMobile,
-        title: "Black T-Shirt",
-        description: "A stylish black t-shirt",
-        price: "$54.00"
-      },
-      {
-        imgSrcMobile: blackLightningTshirtMobile,
-        imgSrcTablet: blackLightningTshirtMobile,
-        imgSrcDesktop: blackLightningTshirtMobile,
-        title: "Black Lightning T-Shirt",
-        description: "A bold black t-shirt with lightning design",
-        price: "$65.00"
-      },
-      {
-        imgSrcMobile: daddyTshirtMobile,
-        imgSrcTablet: daddyTshirtMobile,
-        imgSrcDesktop: daddyTshirtMobile,
-        title: "Daddy T-Shirt",
-        description: "A classic 'Daddy' t-shirt",
-        price: "$60.00"
-      },
-      {
-        imgSrcMobile: darkblueTshirtMobile,
-        imgSrcTablet: darkblueTshirtMobile,
-        imgSrcDesktop: darkblueTshirtMobile,
-        title: "Dark Blue T-Shirt",
-        description: "A deep blue t-shirt for a stylish look",
-        price: "$50.00"
-      },
-      {
-        imgSrcMobile: greyTshirtMobile,
-        imgSrcTablet: greyTshirtMobile,
-        imgSrcDesktop: greyTshirtMobile,
-        title: "Grey T-Shirt",
-        description: "A casual grey t-shirt",
+        title: "Black Joggers",
+        description: "Comfortable joggers for lounging or workout.",
         price: "$55.00"
       },
       {
+        id: "pants2",
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Lightning Print Pants",
+        description: "Stylish pants with a lightning print design.",
+        price: "$75.00"
+      },
+      {
+        id: "pants3",
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy Casual Trousers",
+        description: "Classic casual trousers for a relaxed style.",
+        price: "$60.00"
+      },
+      {
+        id: "pants4",
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue Slim Pants",
+        description: "Slim-fit pants for modern men.",
+        price: "$85.00"
+      },
+      {
+        id: "pants5",
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey Cargo Pants",
+        description: "Utility cargo pants with multiple pockets.",
+        price: "$70.00"
+      },
+      {
+        id: "pants6",
         imgSrcMobile: lightblueTshirtMobile,
         imgSrcTablet: lightblueTshirtMobile,
         imgSrcDesktop: lightblueTshirtMobile,
-        title: "Light Blue T-Shirt",
-        description: "A soft light blue t-shirt",
-        price: "$52.00"
+        title: "Light Blue Jeans",
+        description: "Classic denim jeans for casual wear.",
+        price: "$65.00"
       },
       {
+        id: "pants7",
         imgSrcMobile: mountainTshirtMobile,
         imgSrcTablet: mountainTshirtMobile,
         imgSrcDesktop: mountainTshirtMobile,
-        title: "Mountain T-Shirt",
-        description: "A t-shirt featuring a mountain design",
-        price: "$58.00"
+        title: "Mountain Hiker Pants",
+        description: "Durable pants for hiking and outdoor activities.",
+        price: "$95.00"
       },
       {
+        id: "pants8",
         imgSrcMobile: pinkTshirtMobile,
         imgSrcTablet: pinkTshirtMobile,
         imgSrcDesktop: pinkTshirtMobile,
-        title: "Pink T-Shirt",
-        description: "A cute pink t-shirt",
-        price: "$53.00"
+        title: "Pink Yoga Pants",
+        description: "Comfortable yoga pants for active women.",
+        price: "$50.00"
       },
       {
+        id: "pants9",
         imgSrcMobile: primetimeTshirtMobile,
         imgSrcTablet: primetimeTshirtMobile,
         imgSrcDesktop: primetimeTshirtMobile,
-        title: "Primetime T-Shirt",
-        description: "A stylish primetime t-shirt",
-        price: "$59.00"
+        title: "Primetime Track Pants",
+        description: "High-performance track pants for athletes.",
+        price: "$85.00"
       },
       {
+        id: "pants10",
         imgSrcMobile: whiteTshirtMobile,
         imgSrcTablet: whiteTshirtMobile,
         imgSrcDesktop: whiteTshirtMobile,
-        title: "White T-Shirt",
-        description: "A classic white t-shirt",
-        price: "$54.00"
+        title: "White Dress Pants",
+        description: "Elegant dress pants for formal occasions.",
+        price: "$90.00"
       },
       {
+        id: "pants11",
         imgSrcMobile: yourDesignTshirtMobile,
         imgSrcTablet: yourDesignTshirtMobile,
         imgSrcDesktop: yourDesignTshirtMobile,
-        title: "Your Design T-Shirt",
-        description: "A customizable t-shirt for your unique style",
-        price: "$60.00"
+        title: "Customizable Pants",
+        description: "Design your own pair of custom pants.",
+        price: "$100.00"
       }
     ],
     "Sunglasses": [
       {
+        id: "sunglass1",
         imgSrcMobile: blackTshirtMobile,
         imgSrcTablet: blackTshirtMobile,
         imgSrcDesktop: blackTshirtMobile,
-        title: "Black T-Shirt",
-        description: "A stylish black t-shirt",
-        price: "$54.00"
+        title: "Black Aviators",
+        description: "Classic aviator sunglasses for a timeless look.",
+        price: "$45.00"
       },
       {
+        id: "sunglass2",
         imgSrcMobile: blackLightningTshirtMobile,
         imgSrcTablet: blackLightningTshirtMobile,
         imgSrcDesktop: blackLightningTshirtMobile,
-        title: "Black Lightning T-Shirt",
-        description: "A bold black t-shirt with lightning design",
-        price: "$65.00"
-      },
-      {
-        imgSrcMobile: daddyTshirtMobile,
-        imgSrcTablet: daddyTshirtMobile,
-        imgSrcDesktop: daddyTshirtMobile,
-        title: "Daddy T-Shirt",
-        description: "A classic 'Daddy' t-shirt",
-        price: "$60.00"
-      },
-      {
-        imgSrcMobile: darkblueTshirtMobile,
-        imgSrcTablet: darkblueTshirtMobile,
-        imgSrcDesktop: darkblueTshirtMobile,
-        title: "Dark Blue T-Shirt",
-        description: "A deep blue t-shirt for a stylish look",
-        price: "$50.00"
-      },
-      {
-        imgSrcMobile: greyTshirtMobile,
-        imgSrcTablet: greyTshirtMobile,
-        imgSrcDesktop: greyTshirtMobile,
-        title: "Grey T-Shirt",
-        description: "A casual grey t-shirt",
+        title: "Lightning Sunglasses",
+        description: "Bold sunglasses with a lightning design.",
         price: "$55.00"
       },
       {
+        id: "sunglass3",
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy Round Sunglasses",
+        description: "Vintage-inspired round sunglasses.",
+        price: "$50.00"
+      },
+      {
+        id: "sunglass4",
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue Polarized",
+        description: "Polarized sunglasses for UV protection.",
+        price: "$70.00"
+      },
+      {
+        id: "sunglass5",
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey Sport Sunglasses",
+        description: "Durable sunglasses for outdoor activities.",
+        price: "$65.00"
+      },
+      {
+        id: "sunglass6",
         imgSrcMobile: lightblueTshirtMobile,
         imgSrcTablet: lightblueTshirtMobile,
         imgSrcDesktop: lightblueTshirtMobile,
-        title: "Light Blue T-Shirt",
-        description: "A soft light blue t-shirt",
-        price: "$52.00"
+        title: "Light Blue Cat-Eyes",
+        description: "Chic cat-eye sunglasses for stylish women.",
+        price: "$80.00"
       },
       {
+        id: "sunglass7",
         imgSrcMobile: mountainTshirtMobile,
         imgSrcTablet: mountainTshirtMobile,
         imgSrcDesktop: mountainTshirtMobile,
-        title: "Mountain T-Shirt",
-        description: "A t-shirt featuring a mountain design",
-        price: "$58.00"
+        title: "Mountain Sunglasses",
+        description: "Sunglasses built for adventure.",
+        price: "$90.00"
       },
       {
+        id: "sunglass8",
         imgSrcMobile: pinkTshirtMobile,
         imgSrcTablet: pinkTshirtMobile,
         imgSrcDesktop: pinkTshirtMobile,
-        title: "Pink T-Shirt",
-        description: "A cute pink t-shirt",
-        price: "$53.00"
+        title: "Pink Fashion Sunglasses",
+        description: "Bold pink sunglasses for trendy looks.",
+        price: "$65.00"
       },
       {
+        id: "sunglass9",
         imgSrcMobile: primetimeTshirtMobile,
         imgSrcTablet: primetimeTshirtMobile,
         imgSrcDesktop: primetimeTshirtMobile,
-        title: "Primetime T-Shirt",
-        description: "A stylish primetime t-shirt",
-        price: "$59.00"
+        title: "Primetime Foldable Sunglasses",
+        description: "Compact foldable sunglasses for travel.",
+        price: "$75.00"
       },
       {
+        id: "sunglass10",
         imgSrcMobile: whiteTshirtMobile,
         imgSrcTablet: whiteTshirtMobile,
         imgSrcDesktop: whiteTshirtMobile,
-        title: "White T-Shirt",
-        description: "A classic white t-shirt",
-        price: "$54.00"
+        title: "White Oversized Sunglasses",
+        description: "Oversized sunglasses for extra sun protection.",
+        price: "$85.00"
       },
       {
+        id: "sunglass11",
         imgSrcMobile: yourDesignTshirtMobile,
         imgSrcTablet: yourDesignTshirtMobile,
         imgSrcDesktop: yourDesignTshirtMobile,
-        title: "Your Design T-Shirt",
-        description: "A customizable t-shirt for your unique style",
-        price: "$60.00"
+        title: "Customizable Sunglasses",
+        description: "Create your own unique pair of sunglasses.",
+        price: "$100.00"
       }
     ],
     "Jackets": [
       {
+        id: "jacket1",
         imgSrcMobile: blackTshirtMobile,
         imgSrcTablet: blackTshirtMobile,
         imgSrcDesktop: blackTshirtMobile,
-        title: "Black T-Shirt",
-        description: "A stylish black t-shirt",
-        price: "$54.00"
+        title: "Black Leather Jacket",
+        description: "A classic black leather jacket for any season.",
+        price: "$200.00"
       },
       {
+        id: "jacket2",
         imgSrcMobile: blackLightningTshirtMobile,
         imgSrcTablet: blackLightningTshirtMobile,
         imgSrcDesktop: blackLightningTshirtMobile,
-        title: "Black Lightning T-Shirt",
-        description: "A bold black t-shirt with lightning design",
-        price: "$65.00"
+        title: "Lightning Denim Jacket",
+        description: "A trendy denim jacket with a lightning design.",
+        price: "$130.00"
       },
       {
+        id: "jacket3",
         imgSrcMobile: daddyTshirtMobile,
         imgSrcTablet: daddyTshirtMobile,
         imgSrcDesktop: daddyTshirtMobile,
-        title: "Daddy T-Shirt",
-        description: "A classic 'Daddy' t-shirt",
-        price: "$60.00"
+        title: "Daddy Bomber Jacket",
+        description: "A casual bomber jacket for stylish dads.",
+        price: "$140.00"
       },
       {
+        id: "jacket4",
         imgSrcMobile: darkblueTshirtMobile,
         imgSrcTablet: darkblueTshirtMobile,
         imgSrcDesktop: darkblueTshirtMobile,
-        title: "Dark Blue T-Shirt",
-        description: "A deep blue t-shirt for a stylish look",
-        price: "$50.00"
+        title: "Dark Blue Puffer Jacket",
+        description: "A warm puffer jacket for cold weather.",
+        price: "$180.00"
       },
       {
+        id: "jacket5",
         imgSrcMobile: greyTshirtMobile,
         imgSrcTablet: greyTshirtMobile,
         imgSrcDesktop: greyTshirtMobile,
-        title: "Grey T-Shirt",
-        description: "A casual grey t-shirt",
-        price: "$55.00"
+        title: "Grey Trench Coat",
+        description: "A stylish grey trench coat for a sophisticated look.",
+        price: "$220.00"
       },
       {
+        id: "jacket6",
         imgSrcMobile: lightblueTshirtMobile,
         imgSrcTablet: lightblueTshirtMobile,
         imgSrcDesktop: lightblueTshirtMobile,
-        title: "Light Blue T-Shirt",
-        description: "A soft light blue t-shirt",
-        price: "$52.00"
+        title: "Light Blue Windbreaker",
+        description: "A lightweight windbreaker for breezy days.",
+        price: "$95.00"
       },
       {
+        id: "jacket7",
         imgSrcMobile: mountainTshirtMobile,
         imgSrcTablet: mountainTshirtMobile,
         imgSrcDesktop: mountainTshirtMobile,
-        title: "Mountain T-Shirt",
-        description: "A t-shirt featuring a mountain design",
-        price: "$58.00"
+        title: "Mountain Fleece Jacket",
+        description: "A cozy fleece jacket for outdoor activities.",
+        price: "$125.00"
       },
       {
+        id: "jacket8",
         imgSrcMobile: pinkTshirtMobile,
         imgSrcTablet: pinkTshirtMobile,
         imgSrcDesktop: pinkTshirtMobile,
-        title: "Pink T-Shirt",
-        description: "A cute pink t-shirt",
-        price: "$53.00"
+        title: "Pink Varsity Jacket",
+        description: "A stylish varsity jacket with a touch of pink.",
+        price: "$150.00"
       },
       {
+        id: "jacket9",
         imgSrcMobile: primetimeTshirtMobile,
         imgSrcTablet: primetimeTshirtMobile,
         imgSrcDesktop: primetimeTshirtMobile,
-        title: "Primetime T-Shirt",
-        description: "A stylish primetime t-shirt",
-        price: "$59.00"
+        title: "Primetime Wool Coat",
+        description: "An elegant wool coat for primetime style.",
+        price: "$250.00"
       },
       {
+        id: "jacket10",
         imgSrcMobile: whiteTshirtMobile,
         imgSrcTablet: whiteTshirtMobile,
         imgSrcDesktop: whiteTshirtMobile,
-        title: "White T-Shirt",
-        description: "A classic white t-shirt",
-        price: "$54.00"
+        title: "White Peacoat",
+        description: "A stylish peacoat for formal or casual wear.",
+        price: "$240.00"
       },
       {
+        id: "jacket11",
         imgSrcMobile: yourDesignTshirtMobile,
         imgSrcTablet: yourDesignTshirtMobile,
         imgSrcDesktop: yourDesignTshirtMobile,
-        title: "Your Design T-Shirt",
-        description: "A customizable t-shirt for your unique style",
-        price: "$60.00"
+        title: "Customizable Jacket",
+        description: "Design your own jacket to fit your unique style.",
+        price: "$275.00"
       }
     ]
   };

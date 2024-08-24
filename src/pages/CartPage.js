@@ -4,13 +4,14 @@ import { Button, Container } from 'react-bootstrap';
 
 const CartPage = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
+  console.log("Cart items on cart page:", cartItems);
 
   return (
     <Container className="my-5">
       <h2>Your Cart</h2>
       {cartItems.length > 0 ? (
         cartItems.map((item, index) => (
-          <div key={index} className="cart-item d-flex justify-content-between align-items-center">
+          <div key={item.id} className="cart-item d-flex justify-content-between align-items-center">
             <div>
               <p>{item.title} - {item.price}</p>
               <p>Quantity: {item.quantity}</p>

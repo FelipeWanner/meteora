@@ -19,9 +19,10 @@ const CategoryPage = () => {
       <h2 className="text-center my-3">{categoryName}</h2>
       <Row className="g-4">
         {products.length > 0 ? (
-          products.map((product, index) => (
-            <Col key={index} xs={12} md={6} xl={4}>
+          products.map((product) => (
+            <Col key={product.id} xs={12} md={6} xl={4}>
               <ProductCard
+                id={product.id}
                 imgSrcMobile={product.imgSrcMobile}
                 imgSrcTablet={product.imgSrcTablet}
                 imgSrcDesktop={product.imgSrcDesktop}

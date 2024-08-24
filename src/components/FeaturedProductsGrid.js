@@ -14,9 +14,10 @@ const FeaturedProductsGrid = () => {
 
   return (
     <div className="container row mx-auto g-4 mt-3">
-      {products.map((product, index) => (
-        <div key={index} className="col-12 col-md-6 col-xxl-4">
+      {products.map((product) => (
+        <div key={product.id} className="col-12 col-md-6 col-xxl-4">
           <ProductCard
+            id={product.id}
             imgSrcMobile={product.imgSrcMobile}
             imgSrcTablet={product.imgSrcTablet}
             imgSrcDesktop={product.imgSrcDesktop}
