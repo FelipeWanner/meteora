@@ -9,7 +9,7 @@ const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, descrip
         <source srcSet={imgSrcMobile} media="(max-width: 767px)" />
         <source srcSet={imgSrcTablet} media="(min-width: 768px) and (max-width: 1199px)" />
         <source srcSet={imgSrcDesktop} media="(min-width: 1200px)" />
-        <Card.Img variant="top" src={imgSrcDesktop} alt={title} className="img-fluid" />
+        <img src={imgSrcDesktop} alt={title} className="card-img-top img-fluid" />
       </picture>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
@@ -22,3 +22,4 @@ const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, descrip
 };
 
 export default ProductCard;
+

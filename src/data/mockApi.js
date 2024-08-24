@@ -54,6 +54,19 @@ import produtoBolsaMobile from "../assets/Mobile/produtos/bolsa.png";
 import produtoBolsaTablet from "../assets/Tablet/produtos/bolsa.png";
 import produtoBolsaDesktop from "../assets/Desktop/produtos/bolsa.png";
 
+// Imports for T-Shirts category images (to be reused in all categories for now)
+import blackTshirtMobile from '../assets/Categories-Tshirt/black-tshirt.jpg';
+import blackLightningTshirtMobile from '../assets/Categories-Tshirt/blackLightning-tshirt.jpg';
+import daddyTshirtMobile from '../assets/Categories-Tshirt/daddy-tshirt.jpg';
+import darkblueTshirtMobile from '../assets/Categories-Tshirt/darkblue-tshirt.jpg';
+import greyTshirtMobile from '../assets/Categories-Tshirt/grey-tshirt.jpg';
+import lightblueTshirtMobile from '../assets/Categories-Tshirt/lightblue-tshirt.jpg';
+import mountainTshirtMobile from '../assets/Categories-Tshirt/mountain-tshirt.jpg';
+import pinkTshirtMobile from '../assets/Categories-Tshirt/pink-tshirt.jpg';
+import primetimeTshirtMobile from '../assets/Categories-Tshirt/primetime-tshirt.jpg';
+import whiteTshirtMobile from '../assets/Categories-Tshirt/white-tshirt.jpg';
+import yourDesignTshirtMobile from '../assets/Categories-Tshirt/yourDesign-tshirt.jpg';
+
 // Mock API function to simulate fetching data
 export const getStores = () => {
     return Promise.resolve([
@@ -119,6 +132,7 @@ export const getCategories = () => {
     ]);
 };
 
+//list com os produtos da pagina inicial
 export const getProducts = () => {
     return Promise.resolve([
         {
@@ -172,3 +186,569 @@ export const getProducts = () => {
     ]);
 };
 
+
+//array com todos os produtos que virao do back (11 produtos para cada categoria)
+  const products = {
+    "T-Shirts": [
+      {
+        imgSrcMobile: blackTshirtMobile,
+        imgSrcTablet: blackTshirtMobile,
+        imgSrcDesktop: blackTshirtMobile,
+        title: "Black T-Shirt",
+        description: "A stylish black t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Black Lightning T-Shirt",
+        description: "A bold black t-shirt with lightning design",
+        price: "$65.00"
+      },
+      {
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy T-Shirt",
+        description: "A classic 'Daddy' t-shirt",
+        price: "$60.00"
+      },
+      {
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue T-Shirt",
+        description: "A deep blue t-shirt for a stylish look",
+        price: "$50.00"
+      },
+      {
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey T-Shirt",
+        description: "A casual grey t-shirt",
+        price: "$55.00"
+      },
+      {
+        imgSrcMobile: lightblueTshirtMobile,
+        imgSrcTablet: lightblueTshirtMobile,
+        imgSrcDesktop: lightblueTshirtMobile,
+        title: "Light Blue T-Shirt",
+        description: "A soft light blue t-shirt",
+        price: "$52.00"
+      },
+      {
+        imgSrcMobile: mountainTshirtMobile,
+        imgSrcTablet: mountainTshirtMobile,
+        imgSrcDesktop: mountainTshirtMobile,
+        title: "Mountain T-Shirt",
+        description: "A t-shirt featuring a mountain design",
+        price: "$58.00"
+      },
+      {
+        imgSrcMobile: pinkTshirtMobile,
+        imgSrcTablet: pinkTshirtMobile,
+        imgSrcDesktop: pinkTshirtMobile,
+        title: "Pink T-Shirt",
+        description: "A cute pink t-shirt",
+        price: "$53.00"
+      },
+      {
+        imgSrcMobile: primetimeTshirtMobile,
+        imgSrcTablet: primetimeTshirtMobile,
+        imgSrcDesktop: primetimeTshirtMobile,
+        title: "Primetime T-Shirt",
+        description: "A stylish primetime t-shirt",
+        price: "$59.00"
+      },
+      {
+        imgSrcMobile: whiteTshirtMobile,
+        imgSrcTablet: whiteTshirtMobile,
+        imgSrcDesktop: whiteTshirtMobile,
+        title: "White T-Shirt",
+        description: "A classic white t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: yourDesignTshirtMobile,
+        imgSrcTablet: yourDesignTshirtMobile,
+        imgSrcDesktop: yourDesignTshirtMobile,
+        title: "Your Design T-Shirt",
+        description: "A customizable t-shirt for your unique style",
+        price: "$60.00"
+      }
+    ],
+    "Purses": [
+      {
+        imgSrcMobile: blackTshirtMobile,
+        imgSrcTablet: blackTshirtMobile,
+        imgSrcDesktop: blackTshirtMobile,
+        title: "Black T-Shirt",
+        description: "A stylish black t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Black Lightning T-Shirt",
+        description: "A bold black t-shirt with lightning design",
+        price: "$65.00"
+      },
+      {
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy T-Shirt",
+        description: "A classic 'Daddy' t-shirt",
+        price: "$60.00"
+      },
+      {
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue T-Shirt",
+        description: "A deep blue t-shirt for a stylish look",
+        price: "$50.00"
+      },
+      {
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey T-Shirt",
+        description: "A casual grey t-shirt",
+        price: "$55.00"
+      },
+      {
+        imgSrcMobile: lightblueTshirtMobile,
+        imgSrcTablet: lightblueTshirtMobile,
+        imgSrcDesktop: lightblueTshirtMobile,
+        title: "Light Blue T-Shirt",
+        description: "A soft light blue t-shirt",
+        price: "$52.00"
+      },
+      {
+        imgSrcMobile: mountainTshirtMobile,
+        imgSrcTablet: mountainTshirtMobile,
+        imgSrcDesktop: mountainTshirtMobile,
+        title: "Mountain T-Shirt",
+        description: "A t-shirt featuring a mountain design",
+        price: "$58.00"
+      },
+      {
+        imgSrcMobile: pinkTshirtMobile,
+        imgSrcTablet: pinkTshirtMobile,
+        imgSrcDesktop: pinkTshirtMobile,
+        title: "Pink T-Shirt",
+        description: "A cute pink t-shirt",
+        price: "$53.00"
+      },
+      {
+        imgSrcMobile: primetimeTshirtMobile,
+        imgSrcTablet: primetimeTshirtMobile,
+        imgSrcDesktop: primetimeTshirtMobile,
+        title: "Primetime T-Shirt",
+        description: "A stylish primetime t-shirt",
+        price: "$59.00"
+      },
+      {
+        imgSrcMobile: whiteTshirtMobile,
+        imgSrcTablet: whiteTshirtMobile,
+        imgSrcDesktop: whiteTshirtMobile,
+        title: "White T-Shirt",
+        description: "A classic white t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: yourDesignTshirtMobile,
+        imgSrcTablet: yourDesignTshirtMobile,
+        imgSrcDesktop: yourDesignTshirtMobile,
+        title: "Your Design T-Shirt",
+        description: "A customizable t-shirt for your unique style",
+        price: "$60.00"
+      }
+    ],
+    "Sneakers": [
+      {
+        imgSrcMobile: blackTshirtMobile,
+        imgSrcTablet: blackTshirtMobile,
+        imgSrcDesktop: blackTshirtMobile,
+        title: "Black T-Shirt",
+        description: "A stylish black t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Black Lightning T-Shirt",
+        description: "A bold black t-shirt with lightning design",
+        price: "$65.00"
+      },
+      {
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy T-Shirt",
+        description: "A classic 'Daddy' t-shirt",
+        price: "$60.00"
+      },
+      {
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue T-Shirt",
+        description: "A deep blue t-shirt for a stylish look",
+        price: "$50.00"
+      },
+      {
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey T-Shirt",
+        description: "A casual grey t-shirt",
+        price: "$55.00"
+      },
+      {
+        imgSrcMobile: lightblueTshirtMobile,
+        imgSrcTablet: lightblueTshirtMobile,
+        imgSrcDesktop: lightblueTshirtMobile,
+        title: "Light Blue T-Shirt",
+        description: "A soft light blue t-shirt",
+        price: "$52.00"
+      },
+      {
+        imgSrcMobile: mountainTshirtMobile,
+        imgSrcTablet: mountainTshirtMobile,
+        imgSrcDesktop: mountainTshirtMobile,
+        title: "Mountain T-Shirt",
+        description: "A t-shirt featuring a mountain design",
+        price: "$58.00"
+      },
+      {
+        imgSrcMobile: pinkTshirtMobile,
+        imgSrcTablet: pinkTshirtMobile,
+        imgSrcDesktop: pinkTshirtMobile,
+        title: "Pink T-Shirt",
+        description: "A cute pink t-shirt",
+        price: "$53.00"
+      },
+      {
+        imgSrcMobile: primetimeTshirtMobile,
+        imgSrcTablet: primetimeTshirtMobile,
+        imgSrcDesktop: primetimeTshirtMobile,
+        title: "Primetime T-Shirt",
+        description: "A stylish primetime t-shirt",
+        price: "$59.00"
+      },
+      {
+        imgSrcMobile: whiteTshirtMobile,
+        imgSrcTablet: whiteTshirtMobile,
+        imgSrcDesktop: whiteTshirtMobile,
+        title: "White T-Shirt",
+        description: "A classic white t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: yourDesignTshirtMobile,
+        imgSrcTablet: yourDesignTshirtMobile,
+        imgSrcDesktop: yourDesignTshirtMobile,
+        title: "Your Design T-Shirt",
+        description: "A customizable t-shirt for your unique style",
+        price: "$60.00"
+      }
+    ],
+    "Pants": [
+      {
+        imgSrcMobile: blackTshirtMobile,
+        imgSrcTablet: blackTshirtMobile,
+        imgSrcDesktop: blackTshirtMobile,
+        title: "Black T-Shirt",
+        description: "A stylish black t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Black Lightning T-Shirt",
+        description: "A bold black t-shirt with lightning design",
+        price: "$65.00"
+      },
+      {
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy T-Shirt",
+        description: "A classic 'Daddy' t-shirt",
+        price: "$60.00"
+      },
+      {
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue T-Shirt",
+        description: "A deep blue t-shirt for a stylish look",
+        price: "$50.00"
+      },
+      {
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey T-Shirt",
+        description: "A casual grey t-shirt",
+        price: "$55.00"
+      },
+      {
+        imgSrcMobile: lightblueTshirtMobile,
+        imgSrcTablet: lightblueTshirtMobile,
+        imgSrcDesktop: lightblueTshirtMobile,
+        title: "Light Blue T-Shirt",
+        description: "A soft light blue t-shirt",
+        price: "$52.00"
+      },
+      {
+        imgSrcMobile: mountainTshirtMobile,
+        imgSrcTablet: mountainTshirtMobile,
+        imgSrcDesktop: mountainTshirtMobile,
+        title: "Mountain T-Shirt",
+        description: "A t-shirt featuring a mountain design",
+        price: "$58.00"
+      },
+      {
+        imgSrcMobile: pinkTshirtMobile,
+        imgSrcTablet: pinkTshirtMobile,
+        imgSrcDesktop: pinkTshirtMobile,
+        title: "Pink T-Shirt",
+        description: "A cute pink t-shirt",
+        price: "$53.00"
+      },
+      {
+        imgSrcMobile: primetimeTshirtMobile,
+        imgSrcTablet: primetimeTshirtMobile,
+        imgSrcDesktop: primetimeTshirtMobile,
+        title: "Primetime T-Shirt",
+        description: "A stylish primetime t-shirt",
+        price: "$59.00"
+      },
+      {
+        imgSrcMobile: whiteTshirtMobile,
+        imgSrcTablet: whiteTshirtMobile,
+        imgSrcDesktop: whiteTshirtMobile,
+        title: "White T-Shirt",
+        description: "A classic white t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: yourDesignTshirtMobile,
+        imgSrcTablet: yourDesignTshirtMobile,
+        imgSrcDesktop: yourDesignTshirtMobile,
+        title: "Your Design T-Shirt",
+        description: "A customizable t-shirt for your unique style",
+        price: "$60.00"
+      }
+    ],
+    "Sunglasses": [
+      {
+        imgSrcMobile: blackTshirtMobile,
+        imgSrcTablet: blackTshirtMobile,
+        imgSrcDesktop: blackTshirtMobile,
+        title: "Black T-Shirt",
+        description: "A stylish black t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Black Lightning T-Shirt",
+        description: "A bold black t-shirt with lightning design",
+        price: "$65.00"
+      },
+      {
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy T-Shirt",
+        description: "A classic 'Daddy' t-shirt",
+        price: "$60.00"
+      },
+      {
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue T-Shirt",
+        description: "A deep blue t-shirt for a stylish look",
+        price: "$50.00"
+      },
+      {
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey T-Shirt",
+        description: "A casual grey t-shirt",
+        price: "$55.00"
+      },
+      {
+        imgSrcMobile: lightblueTshirtMobile,
+        imgSrcTablet: lightblueTshirtMobile,
+        imgSrcDesktop: lightblueTshirtMobile,
+        title: "Light Blue T-Shirt",
+        description: "A soft light blue t-shirt",
+        price: "$52.00"
+      },
+      {
+        imgSrcMobile: mountainTshirtMobile,
+        imgSrcTablet: mountainTshirtMobile,
+        imgSrcDesktop: mountainTshirtMobile,
+        title: "Mountain T-Shirt",
+        description: "A t-shirt featuring a mountain design",
+        price: "$58.00"
+      },
+      {
+        imgSrcMobile: pinkTshirtMobile,
+        imgSrcTablet: pinkTshirtMobile,
+        imgSrcDesktop: pinkTshirtMobile,
+        title: "Pink T-Shirt",
+        description: "A cute pink t-shirt",
+        price: "$53.00"
+      },
+      {
+        imgSrcMobile: primetimeTshirtMobile,
+        imgSrcTablet: primetimeTshirtMobile,
+        imgSrcDesktop: primetimeTshirtMobile,
+        title: "Primetime T-Shirt",
+        description: "A stylish primetime t-shirt",
+        price: "$59.00"
+      },
+      {
+        imgSrcMobile: whiteTshirtMobile,
+        imgSrcTablet: whiteTshirtMobile,
+        imgSrcDesktop: whiteTshirtMobile,
+        title: "White T-Shirt",
+        description: "A classic white t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: yourDesignTshirtMobile,
+        imgSrcTablet: yourDesignTshirtMobile,
+        imgSrcDesktop: yourDesignTshirtMobile,
+        title: "Your Design T-Shirt",
+        description: "A customizable t-shirt for your unique style",
+        price: "$60.00"
+      }
+    ],
+    "Jackets": [
+      {
+        imgSrcMobile: blackTshirtMobile,
+        imgSrcTablet: blackTshirtMobile,
+        imgSrcDesktop: blackTshirtMobile,
+        title: "Black T-Shirt",
+        description: "A stylish black t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: blackLightningTshirtMobile,
+        imgSrcTablet: blackLightningTshirtMobile,
+        imgSrcDesktop: blackLightningTshirtMobile,
+        title: "Black Lightning T-Shirt",
+        description: "A bold black t-shirt with lightning design",
+        price: "$65.00"
+      },
+      {
+        imgSrcMobile: daddyTshirtMobile,
+        imgSrcTablet: daddyTshirtMobile,
+        imgSrcDesktop: daddyTshirtMobile,
+        title: "Daddy T-Shirt",
+        description: "A classic 'Daddy' t-shirt",
+        price: "$60.00"
+      },
+      {
+        imgSrcMobile: darkblueTshirtMobile,
+        imgSrcTablet: darkblueTshirtMobile,
+        imgSrcDesktop: darkblueTshirtMobile,
+        title: "Dark Blue T-Shirt",
+        description: "A deep blue t-shirt for a stylish look",
+        price: "$50.00"
+      },
+      {
+        imgSrcMobile: greyTshirtMobile,
+        imgSrcTablet: greyTshirtMobile,
+        imgSrcDesktop: greyTshirtMobile,
+        title: "Grey T-Shirt",
+        description: "A casual grey t-shirt",
+        price: "$55.00"
+      },
+      {
+        imgSrcMobile: lightblueTshirtMobile,
+        imgSrcTablet: lightblueTshirtMobile,
+        imgSrcDesktop: lightblueTshirtMobile,
+        title: "Light Blue T-Shirt",
+        description: "A soft light blue t-shirt",
+        price: "$52.00"
+      },
+      {
+        imgSrcMobile: mountainTshirtMobile,
+        imgSrcTablet: mountainTshirtMobile,
+        imgSrcDesktop: mountainTshirtMobile,
+        title: "Mountain T-Shirt",
+        description: "A t-shirt featuring a mountain design",
+        price: "$58.00"
+      },
+      {
+        imgSrcMobile: pinkTshirtMobile,
+        imgSrcTablet: pinkTshirtMobile,
+        imgSrcDesktop: pinkTshirtMobile,
+        title: "Pink T-Shirt",
+        description: "A cute pink t-shirt",
+        price: "$53.00"
+      },
+      {
+        imgSrcMobile: primetimeTshirtMobile,
+        imgSrcTablet: primetimeTshirtMobile,
+        imgSrcDesktop: primetimeTshirtMobile,
+        title: "Primetime T-Shirt",
+        description: "A stylish primetime t-shirt",
+        price: "$59.00"
+      },
+      {
+        imgSrcMobile: whiteTshirtMobile,
+        imgSrcTablet: whiteTshirtMobile,
+        imgSrcDesktop: whiteTshirtMobile,
+        title: "White T-Shirt",
+        description: "A classic white t-shirt",
+        price: "$54.00"
+      },
+      {
+        imgSrcMobile: yourDesignTshirtMobile,
+        imgSrcTablet: yourDesignTshirtMobile,
+        imgSrcDesktop: yourDesignTshirtMobile,
+        title: "Your Design T-Shirt",
+        description: "A customizable t-shirt for your unique style",
+        price: "$60.00"
+      }
+    ]
+  };
+//isso deve facilitar minha vida na hora de passar as categorias
+  const productCategories = {
+    "t-shirts": "T-Shirts",
+    "purses": "Purses",
+    "sneakers": "Sneakers",
+    "pants": "Pants",
+    "sunglasses": "Sunglasses",
+    "jackets": "Jackets"
+  };
+
+  export const getCategoryProducts = async (categoryName) => {
+    return new Promise((resolve) => {
+      const mappedCategory = productCategories[categoryName.toLowerCase()]; // Look up the standard category name
+      console.log(`Mapped Category: ${mappedCategory}`);
+      if (mappedCategory) {
+        resolve(products[mappedCategory] || []);
+      } else {
+        resolve([]); // If the category name is not found, resolve with an empty array
+      }
+    });
+  };
+  
