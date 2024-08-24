@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import meteoraLogo from '../assets/logo-meteora.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginModal from './loginModal';
 
 const StyledNavbar = styled(Navbar)`
   background-color: #000000;
@@ -34,6 +35,7 @@ const NavigationBar = () => {
               Careers
             </Nav.Link>
           </Nav>
+          <LoginModal />
           <Form className="d-flex">
             <FormControl
               type="search"
