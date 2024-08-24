@@ -15,7 +15,7 @@ const ProductCard = ({ imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, descrip
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <p>{price}</p>
-        <Button variant="primary" className="border-0 color-purple rounded-0">See more</Button>
+        <Button variant="primary" className="border-0 color-purple rounded-0">Add to Cart</Button>
       </Card.Body>
     </Card>
   );
