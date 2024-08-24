@@ -67,6 +67,9 @@ import primetimeTshirtMobile from '../assets/Categories-Tshirt/primetime-tshirt.
 import whiteTshirtMobile from '../assets/Categories-Tshirt/white-tshirt.jpg';
 import yourDesignTshirtMobile from '../assets/Categories-Tshirt/yourDesign-tshirt.jpg';
 
+//IMPORT DA FOTO DE USERS
+import JonatasFoto from "../assets/JONATAS-LINDO.jpeg"
+
 // Mock API function to simulate fetching data
 export const getStores = () => {
     return Promise.resolve([
@@ -751,4 +754,30 @@ export const getProducts = () => {
       }
     });
   };
+
   
+  //MOCK API PARA LOGIN DE USUARIO
+
+  const mockUsers = [
+    {
+      username: 'jonatas-lira@example.com',
+      password: '123',
+      fullName: 'Jonatas Lira',
+      profilePic: JonatasFoto,
+    },
+  ];
+  
+  export const authenticateUser = async (email, password) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const user = mockUsers.find(
+          (user) => user.username === email && user.password === password
+        );
+        if (user) {
+          resolve({ username: user.username, fullName: user.fullName, profilePic: user.profilePic });
+        } else {
+          reject('Invalid email or password');
+        }
+      }, 1000);
+    });
+  };

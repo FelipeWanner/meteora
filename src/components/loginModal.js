@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Alert } from 'react-bootstrap';
 import LoginForm from './LoginForm';
+import { authenticateUser } from '../data/mockApi';
 
-const LoginModal = () => {
+const LoginModal = ({ onLoginSuccess }) => {
   const [show, setShow] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleLogin = (email, password) => {
-    // Mock login logic
-    console.log(`Logging in with email: ${email} and password: ${password}`);
-    handleClose();
+  const handleLogin = async (email, password) => {
+    try {
+      const user = await authenticateUser(email, password); // CHAMADA DO mock API PARA AUTENTICAR O USUARIO
+      setErrorMessage('');
+      onLoginSuccess(user); // Pass user data to UserSection after successful login
+      handleClose();
+    } catch (err) {
+      setErrorMessage(err); // Display error message in case of failed login
+    }
   };
 
   return (
@@ -25,6 +32,7 @@ const LoginModal = () => {
           <Modal.Title>Log In</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
           <LoginForm onLogin={handleLogin} />
         </Modal.Body>
       </Modal>
