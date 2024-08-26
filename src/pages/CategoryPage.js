@@ -4,6 +4,11 @@ import ProductCard from '../components/ProductCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
+// funcao para "consertar" o nome para a URL da foto (na url, nao temos espaço, e é tudo lowercase)
+const formatImageUrl = (name) => {
+  return `http://localhost:5000/uploads/${name.toLowerCase().replace(/ /g, '-')}.jpg`;
+};
+
 const CategoryPage = () => {
   const { categoryName } = useParams();
   const [products, setProducts] = useState([]);
@@ -37,7 +42,7 @@ const CategoryPage = () => {
             products.map((product, index) => (
               <Col key={index} xs={12} md={6} xl={4}>
                 <ProductCard
-                  imgSrcMobile={product.image_urls[0]} // Adjust to your actual JSON structure
+                  imageUrl={formatImageUrl(product.name)}  // usando URL da imagem formatada
                   title={product.name}
                   description={product.description}
                   price={product.price}

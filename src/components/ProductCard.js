@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CartContext } from '../components/CartContext';
 
-const ProductCard = ({ id, imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, description, price }) => {
+const ProductCard = ({ id, imageUrl, title, description, price }) => {
   const { addToCart } = useContext(CartContext); // Access addToCart from CartContext
 
   const handleAddToCart = () => {
@@ -12,9 +12,7 @@ const ProductCard = ({ id, imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, des
       title,
       description,
       price,
-      imgSrcMobile,
-      imgSrcTablet,
-      imgSrcDesktop
+      imageUrl,
     };
     console.log("Product added to cart:", product);
     addToCart(product); // Add product to cart
@@ -22,12 +20,7 @@ const ProductCard = ({ id, imgSrcMobile, imgSrcTablet, imgSrcDesktop, title, des
 
   return (
     <Card className="h-100">
-      <picture>
-        <source srcSet={imgSrcMobile} media="(max-width: 767px)" />
-        <source srcSet={imgSrcTablet} media="(min-width: 768px) and (max-width: 1199px)" />
-        <source srcSet={imgSrcDesktop} media="(min-width: 1200px)" />
-        <img src={imgSrcDesktop} alt={title} className="card-img-top img-fluid" />
-      </picture>
+      <img src={imageUrl} alt={title} className="card-img-top img-fluid" />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
