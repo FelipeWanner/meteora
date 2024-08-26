@@ -5,8 +5,19 @@ import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 // funcao para "consertar" o nome para a URL da foto (na url, nao temos espaço, e é tudo lowercase)
-const formatImageUrl = (name) => {
+/* const formatImageUrl = (name) => {
   return `http://localhost:5000/uploads/${name.toLowerCase().replace(/ /g, '-')}.jpg`;
+};
+ */
+
+const getImageUrl = (product) => {
+  // se o URL da imagem comeca com "http" significa que veio do google
+  if (product.image_urls[0].startsWith('http')) {
+    return product.image_urls[0];
+  }
+  
+  // se nao, vem do nosso SQL, e segue a formatação anterior
+  return `http://localhost:5000/uploads/${product.name.toLowerCase().replace(/ /g, '-')}.jpg`;
 };
 
 const CategoryPage = () => {
@@ -42,7 +53,7 @@ const CategoryPage = () => {
             products.map((product, index) => (
               <Col key={index} xs={12} md={6} xl={4}>
                 <ProductCard
-                  imageUrl={formatImageUrl(product.name)}  // usando URL da imagem formatada
+                  imageUrl={getImageUrl(product)}  // usando URL da imagem formatada
                   title={product.name}
                   description={product.description}
                   price={product.price}

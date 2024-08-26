@@ -1,25 +1,71 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import ManagerProfile from '../components/ManagerProfile';
+import ProductForm from '../components/ProductForm';
 
 const AdminDashboardPage = () => {
   const [manager, setManager] = useState(null);
+  const [newProduct, setNewProduct] = useState({
+    name: '',
+    description: '',
+    price: '',
+    stock_quantity: '',
+    category: 'T-Shirts',
+    image_urls: []
+  });
+
+  const categories = ["T-Shirts", "Purses", "Sneakers", "Pants", "Sunglasses", "Jackets"];
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve the manager details from sessionStorage
     const storedManager = sessionStorage.getItem('manager');
     if (storedManager) {
       setManager(JSON.parse(storedManager));
     } else {
-      // Redirect to login if manager is not authenticated
       navigate('/admin-login');
     }
   }, [navigate]);
 
   const handleLogout = () => {
     sessionStorage.removeItem('manager');
-    navigate('/admin-login');  // Redirect to login page on logout
+    navigate('/admin-login');
+  };
+
+  const handleInputChange = (e) => {
+    setNewProduct({
+      ...newProduct,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handlePriceChange = (e) => {
+    const inputValue = e.target.value.replace(',', '.');
+    setNewProduct({
+      ...newProduct,
+      price: inputValue,
+    });
+  };
+
+  const handleAddProduct = async () => {
+    try {
+      const formattedProduct = {
+        ...newProduct,
+        image_urls: [newProduct.image_urls],
+      };
+      const response = await axios.post('/api/products', formattedProduct);
+      setNewProduct({
+        name: '',
+        description: '',
+        price: '',
+        stock_quantity: '',
+        category: 'T-Shirts',
+        image_urls: []
+      });
+    } catch (error) {
+      console.error('Error adding product:', error);
+    }
   };
 
   return (
@@ -27,29 +73,15 @@ const AdminDashboardPage = () => {
       <h2 className="text-center">Admin Dashboard</h2>
       {manager && (
         <>
-          <Row className="mt-4">
-            <Col md={4}>
-              <img
-                src={manager.profilePic}
-                alt={manager.fullName}
-                className="img-fluid rounded-circle"
-                style={{ width: '150px', height: '150px' }}
-              />
-            </Col>
-            <Col md={8}>
-              <h4>{manager.fullName}</h4>
-              <p><strong>Role:</strong> {manager.role}</p>
-              <Button variant="danger" onClick={handleLogout}>Log Out</Button>
-            </Col>
-          </Row>
-
+          <ManagerProfile manager={manager} handleLogout={handleLogout} />
           <hr className="my-5" />
-
-          {/* Additional sections for managing products can be added later */}
-          <h3>Manage Products</h3>
-          <Button variant="primary">Add New Product</Button>
-          <Button variant="secondary" className="ms-3">Update Product</Button>
-          <Button variant="danger" className="ms-3">Remove Product</Button>
+          <ProductForm
+            newProduct={newProduct}
+            handleInputChange={handleInputChange}
+            handlePriceChange={handlePriceChange}
+            handleAddProduct={handleAddProduct}
+            categories={categories}
+          />
         </>
       )}
     </Container>
