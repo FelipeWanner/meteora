@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Accordion  } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ManagerProfile from '../components/ManagerProfile';
 import ProductForm from '../components/ProductForm';
+import EditProductForm from '../components/EditProductForm'; // Import new component
+
 
 const AdminDashboardPage = () => {
   const [manager, setManager] = useState(null);
@@ -54,7 +56,7 @@ const AdminDashboardPage = () => {
         ...newProduct,
         image_urls: [newProduct.image_urls],
       };
-      const response = await axios.post('/api/products', formattedProduct);
+      await axios.post('/api/products', formattedProduct);
       setNewProduct({
         name: '',
         description: '',
@@ -75,13 +77,21 @@ const AdminDashboardPage = () => {
         <>
           <ManagerProfile manager={manager} handleLogout={handleLogout} />
           <hr className="my-5" />
-          <ProductForm
-            newProduct={newProduct}
-            handleInputChange={handleInputChange}
-            handlePriceChange={handlePriceChange}
-            handleAddProduct={handleAddProduct}
-            categories={categories}
-          />
+          
+          {/* Wrap both sections in the Accordion */}
+          <Accordion defaultActiveKey="0">
+            {/* Add New Product Section */}
+            <ProductForm
+              newProduct={newProduct}
+              handleInputChange={handleInputChange}
+              handlePriceChange={handlePriceChange}
+              handleAddProduct={handleAddProduct}
+              categories={categories}
+            />
+
+            {/* Edit Product Section */}
+            <EditProductForm categories={categories} />
+          </Accordion>
         </>
       )}
     </Container>
