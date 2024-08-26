@@ -21,7 +21,7 @@ const Footer = () => {
       <FacilitiesSection />
       <NewsletterForm />
       <FooterContainer>
-        <p>2023 &copy; Felipe Rafael Wanner / Fictional Meteora Store project</p>
+        <p>2024 &copy; Felipe Rafael Wanner / Fictional Meteora Store project</p>
       </FooterContainer>
     </MainContent>
 
