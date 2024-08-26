@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ManagerProfile from '../components/ManagerProfile';
 import ProductForm from '../components/ProductForm';
-import EditProductForm from '../components/EditProductForm'; // Import new component
-
+import EditProductForm from '../components/EditProductForm';
+import DeleteProductForm from '../components/DeleteProductForm';
 
 const AdminDashboardPage = () => {
   const [manager, setManager] = useState(null);
@@ -78,7 +78,7 @@ const AdminDashboardPage = () => {
           <ManagerProfile manager={manager} handleLogout={handleLogout} />
           <hr className="my-5" />
           
-          {/* Wrap both sections in the Accordion */}
+          {/* Wrap all sections in the Accordion */}
           <Accordion defaultActiveKey="0">
             {/* Add New Product Section */}
             <ProductForm
@@ -91,6 +91,9 @@ const AdminDashboardPage = () => {
 
             {/* Edit Product Section */}
             <EditProductForm categories={categories} />
+
+            {/* Delete Product Section */}
+            <DeleteProductForm /> {/* Add Delete Product form */}
           </Accordion>
         </>
       )}
