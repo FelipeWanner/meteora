@@ -79,7 +79,7 @@ const AdminDashboardPage = () => {
           <hr className="my-5" />
           
           {/* Wrap all sections in the Accordion */}
-          <Accordion defaultActiveKey="0">
+          <Accordion defaultActiveKey={null}>
             {/* Add New Product Section */}
             <ProductForm
               newProduct={newProduct}
