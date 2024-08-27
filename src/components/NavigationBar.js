@@ -1,6 +1,6 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import meteoraLogo from '../assets/logo-meteora.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,16 +11,16 @@ const StyledNavbar = styled(Navbar)`
 `;
 
 const NavigationBar = () => {
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
-  const handleLoginClick = () => {
-    setShowLoginModal(true);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      // Navigate to the search results page with the search term in the query
+      navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+    }
   };
-
-  const handleCloseModal = () => {
-    setShowLoginModal(false);
-  };
-
 
   return (
     <StyledNavbar expand="md" variant="dark">
@@ -36,32 +36,21 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/">
-              Home
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/our-stores">
-              Our Stores
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/careers">
-              Careers
-            </Nav.Link>
+            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/our-stores">Our Stores</Nav.Link>
+            <Nav.Link as={NavLink} to="/careers">Careers</Nav.Link>
           </Nav>
-          <UserSection handleLoginClick={handleLoginClick}/>
-          <Form className="d-flex">
+          <UserSection />
+          <Form className="d-flex" onSubmit={handleSearch}>
             <FormControl
               type="search"
               placeholder="Search for a product"
               className="me-2 rounded-0"
               aria-label="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}  // Update search term
             />
-            <Button
-              variant="outline-light"
-              className="rounded-0"
-              onClick={() =>
-                window.location.href =
-                  'https://yv45m72jfaycdkfq7becpqtflm0xinkh.lambda-url.ap-southeast-2.on.aws/'
-              }
-            >
+            <Button variant="outline-light" className="rounded-0" type="submit">
               Search
             </Button>
           </Form>
@@ -72,4 +61,3 @@ const NavigationBar = () => {
 };
 
 export default NavigationBar;
-

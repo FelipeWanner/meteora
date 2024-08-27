@@ -11,6 +11,7 @@ import CartPage from './pages/CartPage';
 import AdminLoginPage from './pages/AdminLoginPage'; 
 import AdminDashboardPage from './pages/AdminDashboardPage'; // Import admin pages
 import { CartProvider } from './components/CartContext';
+import SearchResultsPage from './pages/SearchResultsPage';
 
 // Layout for normal users (with Navbar and Footer)
 const MainLayout = ({ children }) => (
@@ -40,7 +41,8 @@ const App = () => {
           <Route path="/careers" element={<MainLayout><CareersPage /></MainLayout>} />
           <Route path="/category/:categoryName" element={<MainLayout><CategoryPage /></MainLayout>} />
           <Route path="/cart" element={<MainLayout><CartPage /></MainLayout>} />
-          
+          <Route path="/search" element={<MainLayout><SearchResultsPage /></MainLayout>} />
+
           {/* Routes for admin pages (without Navbar and Footer) */}
           <Route path="/admin-login" element={<AdminLayout><AdminLoginPage /></AdminLayout>} />
           <Route path="/admin-dashboard" element={<AdminLayout><AdminDashboardPage /></AdminLayout>} />
@@ -51,3 +53,4 @@ const App = () => {
 };
 
 export default App;
+
