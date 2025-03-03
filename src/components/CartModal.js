@@ -1,10 +1,22 @@
 import React, { useContext } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { CartContext } from './CartContext';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const CartModal = ({ show, handleClose }) => {
-  const { cartItems } = useContext(CartContext); 
+const CartModal = ({ show, handleClose, isLoggedIn }) => {
+  const { cartItems } = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    handleClose(); // Close modal before navigating
+
+    if (!isLoggedIn) {
+      sessionStorage.setItem('previousPage', '/cart');
+      navigate('/login'); // Redirect to login page
+    } else {
+      navigate('/cart'); // Redirect to CartPage 
+    }
+  };
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -24,12 +36,8 @@ const CartModal = ({ show, handleClose }) => {
         )}
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
-        <Button variant="primary" as={Link} to="/cart">
-          View Cart
-        </Button>
+        <Button variant="secondary" onClick={handleClose}>Close</Button>
+        <Button variant="primary" onClick={handleCheckout}>Checkout</Button>
       </Modal.Footer>
     </Modal>
   );

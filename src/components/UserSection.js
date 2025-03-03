@@ -9,14 +9,14 @@ const UserSection = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState({
     fullName: 'User Name',
-    profilePic: defaultUserPic // Default picture before login
+    profilePic: defaultUserPic, // Default picture before login
   });
 
   const handleLoginSuccess = (user) => {
     setIsLoggedIn(true);
     setUserData({
       fullName: user.fullName, // User's full name
-      profilePic: user.profilePic // User's profile picture (from mock API)
+      profilePic: user.profilePic, // User's profile picture (from mock API)
     });
   };
 
@@ -30,7 +30,7 @@ const UserSection = () => {
     <div className="user-section d-flex align-items-center ms-3" style={{ marginRight: '20px' }}>
       <div className="me-2 text-white" style={{ cursor: 'pointer' }}>
         <img
-          src={isLoggedIn ? userData.profilePic : defaultUserPic} // Atualiza a img depois do login
+          src={isLoggedIn ? userData.profilePic : defaultUserPic} // Updates image after login
           alt="User profile"
           style={{ width: '30px', height: '30px', borderRadius: '50%' }}
         />
@@ -42,7 +42,8 @@ const UserSection = () => {
         <i className="bi bi-cart" style={{ fontSize: '1.5rem', color: '#fff' }}></i>
       </Nav.Link>
 
-      <CartModal show={showCartModal} handleClose={() => setShowCartModal(false)} />
+      {/* Pass isLoggedIn to CartModal */}
+      <CartModal show={showCartModal} handleClose={() => setShowCartModal(false)} isLoggedIn={isLoggedIn} />
     </div>
   );
 };

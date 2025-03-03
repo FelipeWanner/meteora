@@ -9,9 +9,12 @@ import CareersPage from './pages/CareersPage';
 import CategoryPage from './pages/CategoryPage';
 import CartPage from './pages/CartPage'; 
 import AdminLoginPage from './pages/AdminLoginPage'; 
-import AdminDashboardPage from './pages/AdminDashboardPage'; // Import admin pages
+import AdminDashboardPage from './pages/AdminDashboardPage'; 
 import { CartProvider } from './components/CartContext';
 import SearchResultsPage from './pages/SearchResultsPage';
+import SitemapPage from './pages/SiteMapPage'; 
+import RegisterPage from './pages/RegisterPage';
+import ProductPage from './pages/ProductPage'
 
 // Layout for normal users (with Navbar and Footer)
 const MainLayout = ({ children }) => (
@@ -42,15 +45,18 @@ const App = () => {
           <Route path="/category/:categoryName" element={<MainLayout><CategoryPage /></MainLayout>} />
           <Route path="/cart" element={<MainLayout><CartPage /></MainLayout>} />
           <Route path="/search" element={<MainLayout><SearchResultsPage /></MainLayout>} />
+          <Route path="/register" element={<MainLayout><RegisterPage /></MainLayout>} />
+          <Route path="/sitemap" element={<MainLayout><SitemapPage /></MainLayout>} />
+          <Route path="/product/:productId" element={<MainLayout><ProductPage /></MainLayout>} />
 
           {/* Routes for admin pages (without Navbar and Footer) */}
           <Route path="/admin-login" element={<AdminLayout><AdminLoginPage /></AdminLayout>} />
           <Route path="/admin-dashboard" element={<AdminLayout><AdminDashboardPage /></AdminLayout>} />
+
         </Routes>
       </Router>
     </CartProvider>
   );
 };
 
-export default App;
-
+export default App;

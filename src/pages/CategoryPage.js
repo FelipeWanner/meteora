@@ -53,6 +53,7 @@ const CategoryPage = () => {
             products.map((product, index) => (
               <Col key={index} xs={12} md={6} xl={4}>
                 <ProductCard
+                  id={product.id}
                   imageUrl={getImageUrl(product)}  // usando URL da imagem formatada
                   title={product.name}
                   description={product.description}

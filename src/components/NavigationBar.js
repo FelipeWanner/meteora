@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import meteoraLogo from '../assets/logo-meteora.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import UserSection from './UserSection';
+import { getCategories } from '../data/mockApi';
 
 const StyledNavbar = styled(Navbar)`
   background-color: #000000;
@@ -12,12 +13,18 @@ const StyledNavbar = styled(Navbar)`
 
 const NavigationBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    getCategories().then((data) => {
+      setCategories(data);
+    });
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      // Navigate to the search results page with the search term in the query
       navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
     }
   };
@@ -37,6 +44,17 @@ const NavigationBar = () => {
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+            <NavDropdown title="Categories" id="nav-dropdown-categories">
+              {categories.map((category, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  onClick={() => navigate(`/category/${encodeURIComponent(category.title)}`)}
+                  style={{ cursor: 'pointer' }} 
+                >
+                  {category.title}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
             <Nav.Link as={NavLink} to="/our-stores">Our Stores</Nav.Link>
             <Nav.Link as={NavLink} to="/careers">Careers</Nav.Link>
           </Nav>
@@ -48,7 +66,7 @@ const NavigationBar = () => {
               className="me-2 rounded-0"
               aria-label="Search"
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}  // Update search term
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
             <Button variant="outline-light" className="rounded-0" type="submit">
               Search
